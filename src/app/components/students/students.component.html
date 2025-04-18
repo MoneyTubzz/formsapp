@@ -1,0 +1,6 @@
+<h3>Student List:</h3>
+<ul>
+    <li *ngFor ="let student_data of students">
+    <app-student-item [student]="student_data"(deleteStudentEvent)="deleteStudent($event)"></app-student-item>
+    </li>
+</ul>

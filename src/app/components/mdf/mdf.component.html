@@ -1,0 +1,45 @@
+
+<form [formGroup]="userForm">
+    <p>
+        <label>Name: </label>
+        <input type="text" formControlName="name" placeholder="Enter Your name...">
+
+        <span *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+            Name Required
+        </span> 
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['minlength']">
+            Name must be at least 3 characters
+        </span> 
+
+        <span *ngIf="nameFormControl.dirty && nameFormControl.errors?.['prohibited']">
+            Invalid Name Input
+        </span> 
+
+    </p>
+
+    <p>
+        <label>Email: </label>
+        <input type="text" formControlName="email" placeholder="Enter your email...">
+
+        <span *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+        Email Required.
+        </span> 
+
+        <span *ngIf="emailFormControl.dirty && emailFormControl.errors?.['email']">
+         Enter a valid email address.
+        </span> 
+    </p>
+
+    <p>
+        <label>Phone Number: </label>
+        <input type="number" formControlName="phone" placeholder="Enter your number..."> 
+
+        <span *ngIf="phoneFormControl.touched && phoneFormControl.errors?.['required']">
+            Phone Number Required.
+        </span> 
+    </p>
+
+    <button type="button" (click)="onSubmit()" [disabled]="userForm.invalid">Submit</button>
+
+</form>
