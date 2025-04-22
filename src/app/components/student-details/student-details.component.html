@@ -1,15 +1,7 @@
-<h3>Student Data:</h3>
-<ul>
-    <li>
-        Id: {{student.id}}
-    </li>
-    <li>
-        Name: {{student.name}}
-    </li>
-    <li>
-        Department: {{student.department}}
-    </li>
-    <li>
-        Age: {{student.age}}
-    </li>
+<h3>Students:</h3>
+<ul *ngIf="student">
+    <li>ID: {{ student.id }}</li>
+    <li>Name: {{ student.name }}</li>
+    <li>Department: {{ student.department.title }}</li>
+    <li>Age: {{ student.age }}</li>
 </ul>

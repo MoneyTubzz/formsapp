@@ -1,8 +1,8 @@
 <header>
     <h1>Header</h1>
-    <hr>
 </header>
 
+<div class="container">
 <nav>
     <h3>Pages: </h3>
     <ul>
@@ -13,17 +13,19 @@
             <a routerLink="/teachers" routerLinkActive="active">Teachers</a>
         </li>
         <li>
-            <a routerLink="/mdf" routerLinkActive="active">FORM</a>
+            <a routerLink="/create-student" routerLinkActive="active">Create Student</a>
+        </li>
+        <li>
+            <a routerLink="/mdf" routerLinkActive="active">MDF</a>
         </li>
     </ul>
-    <hr>
 </nav>
 
-<main>
+
+
     <router-outlet></router-outlet>
-</main>
+</div>
 
 <footer>
-    <hr>
     <h2>Footer</h2>
 </footer>

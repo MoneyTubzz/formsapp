@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+
 import { Istudent } from '../../interfaces/istudent';
 
 @Component({
@@ -7,13 +8,18 @@ import { Istudent } from '../../interfaces/istudent';
   templateUrl: './student-item.component.html',
   styleUrl: './student-item.component.css'
 })
-export class StudentItemComponent {
+export class StudentItemComponent implements OnChanges {
 
+  //Properties
   @Input() student!: Istudent;
   @Output() deleteStudentEvent = new EventEmitter();
 
+  //Methods
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
   onDelete() {
-    this.deleteStudentEvent.emit(this.student.id);
+    this.deleteStudentEvent.emit(this.student.id); // triggers custom event
   }
 
 }
