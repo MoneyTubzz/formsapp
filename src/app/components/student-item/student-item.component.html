@@ -1,8 +1,10 @@
 <div class="card" style="width: 19rem;">
     <div class="card-body">
         <h5 class="card-title text-center">{{student.name}}</h5>
-
-        <a [routerLink]="['/student-details', student.id]" class="btn btn-primary mx-1" > View Details</a>
-        <button type="button" (click)="onDelete()" class=" btn btn-danger mx-2">Delete Student</button>
+        <div class="container mx-3">
+        <a [routerLink]="['/edit-student', student.id]" class="btn btn-secondary" >Edit</a>
+        <a [routerLink]="['/student-details', student.id]" class="btn btn-primary mx-2" >Details</a>
+        <button type="button" (click)="onDelete()" class=" btn btn-danger">Delete</button>
+    </div>
     </div>
 </div>

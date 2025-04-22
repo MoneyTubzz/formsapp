@@ -1,6 +1,19 @@
+*{
+    margin: 0;
+}
+
 .active{
-    color: orange;
+    color: #db3545;
 }
 header, footer{
     text-align: center;
+    color:white;
+    background: black;
 }
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+

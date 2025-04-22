@@ -1,7 +1,13 @@
-<h3>Students:</h3>
-<ul *ngIf="student">
-    <li>ID: {{ student.id }}</li>
-    <li>Name: {{ student.name }}</li>
-    <li>Department: {{ student.department.title }}</li>
-    <li>Age: {{ student.age }}</li>
-</ul>
+<h3>Student Details: </h3>
+<h5>Name: {{student.name}}</h5>
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <ul class="my-1" *ngIf="student">
+                <li>ID: {{ student.id }}</li>
+                <li>Department: {{ student.department.title }}</li>
+                <li>Age: {{ student.age }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

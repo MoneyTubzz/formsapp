@@ -9,11 +9,12 @@ import { StudentFormComponent } from './components/student-form/student-form.com
 
 const routes: Routes = [
   {path: '', redirectTo: 'mdf', pathMatch: 'full'},
-  {path:'students', component: StudentsComponent},
-  {path:'student-details/:student_id', component: StudentDetailsComponent},
-  {path:'teachers', component: TeachersComponent},
+  {path: 'students', component: StudentsComponent},
+  {path: 'student-details/:student_id', component: StudentDetailsComponent},
+  {path: 'teachers', component: TeachersComponent},
   {path: 'mdf', component: MdfComponent},
   {path: 'create-student', component: StudentFormComponent},
+  {path: 'edit-student/:student_id', component: StudentFormComponent},
   {path: '**', component: NotFoundComponent},
 ];
 
